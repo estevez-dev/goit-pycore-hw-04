@@ -1,10 +1,11 @@
 from pathlib import Path
 import task01
 import task02
+from colorama import Fore
 
 main_menu = '''1. Підрахунок заробітних плат
 2. Котики
-3. 
+3. Структура директорії
 4. 
 5. Вихід'''
 
@@ -29,7 +30,8 @@ while True:
 
             print(cats)
         case '3':
-            print('Unimplemented yet')
+            print('Будь ласка, запустіть \'task03.py\' з директорією у якості аргументу. Наприклад:')
+            print('python ' + Fore.BLUE + 'task03.py ' + Fore.CYAN + '/home/user/documents' + Fore.RESET)
         case '4':
             print('Unimplemented yet')
         case '5':
