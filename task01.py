@@ -20,7 +20,7 @@ def total_salary(path):
 
             if len(salaries) == 0:
                 print('No salaries were found in the file')
-                return ()
+                return (0, 0)
 
             return (sum(salaries), total_salary / len(salaries))
     
@@ -30,4 +30,4 @@ def total_salary(path):
     except:
         print('Something went wrong =(')
     
-    return ()
+    return (0, 0)

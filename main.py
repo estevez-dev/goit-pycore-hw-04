@@ -1,24 +1,26 @@
 from pathlib import Path
 import task01
 
-main_menu = '''1. Total salary calculator
+main_menu = '''1. Підрахунок заробітних плат
 2. 
 3. 
 4. 
-5. Exit'''
+5. Вихід'''
 
 print(main_menu)
 
 while True:
-    action = input('Please, enter task number to start, or \'5\' to exit: ')
+    action = input('Введіть, будь ласка, номер завдання, або \'5\' для виходу: ')
+
+    print('\n')
 
     match action:
         case '1':
             file_path = Path(__file__).with_segments('data/salaries.txt')
 
-            result = task01.total_salary(file_path)
+            total, average = task01.total_salary(file_path)
 
-            print(f'total_salary execution result: {result}')
+            print(f'Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}')
         case '2':
             print('Unimplemented yet')
         case '3':
@@ -30,6 +32,8 @@ while True:
         case other:
             print(f'{other} is not a task number or \'5\'')
 
-    input('Press Enter to continue...')
+    print('\n')
+
+    input('Натисніть Enter для продовження...')
 
     print(main_menu)
