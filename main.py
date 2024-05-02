@@ -6,7 +6,7 @@ from colorama import Fore
 main_menu = '''1. Підрахунок заробітних плат
 2. Котики
 3. Структура директорії
-4. 
+4. Бот
 5. Вихід'''
 
 print(main_menu)
@@ -33,7 +33,7 @@ while True:
             print('Будь ласка, запустіть \'task03.py\' з директорією у якості аргументу. Наприклад:')
             print('python ' + Fore.BLUE + 'task03.py ' + Fore.CYAN + '/home/user/documents' + Fore.RESET)
         case '4':
-            print('Unimplemented yet')
+            print('Будь ласка, запустіть \'python task04.py\'')
         case '5':
             break
         case other:
