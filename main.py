@@ -1,8 +1,9 @@
 from pathlib import Path
 import task01
+import task02
 
 main_menu = '''1. Підрахунок заробітних плат
-2. 
+2. Котики
 3. 
 4. 
 5. Вихід'''
@@ -22,7 +23,11 @@ while True:
 
             print(f'Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}')
         case '2':
-            print('Unimplemented yet')
+            file_path = Path(__file__).with_segments('data/cats.txt')
+
+            cats = task02.get_cats_info(file_path)
+
+            print(cats)
         case '3':
             print('Unimplemented yet')
         case '4':
