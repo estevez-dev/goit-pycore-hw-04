@@ -18,8 +18,16 @@ def total_salary(path):
             
             total_salary = sum(salaries)
 
+            if len(salaries) == 0:
+                print('No salaries were found in the file')
+                return ()
+
             return (sum(salaries), total_salary / len(salaries))
+    
     except FileNotFoundError:
         print('Data file not found')
 
-        return ()
+    except:
+        print('Something went wrong =(')
+    
+    return ()
